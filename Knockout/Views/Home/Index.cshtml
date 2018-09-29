@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IndexViewModel
+
+<div class="jumbotron">
+    <form asp-controller="Home" asp-action="Post" method="post" class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <h2>Choose Region</h2>
+            <div class="form-group">
+                <region-selector asp-for="Region" client-country-validation="validateCountry" value="@Model.Region"></region-selector>
+            </div>
+            <div class="btn-group pull-right">
+                <button type="submit" class="btn btn-default">Sumbit</button>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </form>
+</div>
